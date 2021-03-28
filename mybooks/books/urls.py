@@ -4,11 +4,9 @@ from . import views
 
 urlpatterns = [
     # ex: /polls/
-    path('', views.index, name='index'),
-    # ex: /polls/5/
-    path('<int:question_id>/', views.detail, name='detail'),
-    # ex: /polls/5/results/
-    path('<int:question_id>/results/', views.results, name='results'),
+    # path('', views.index, name='index'),
     # ex: /polls/5/vote/
-    path('<int:question_id>/vote/', views.vote, name='vote'),
+    path('', views.books, name='books'),
+    # ex: sort
+    path('?published=<int:published_date>', views.published, name='published')
 ]
